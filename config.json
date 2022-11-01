@@ -1,8 +1,8 @@
 {
   "PhoneAsItem": {
-    "enabled": false,
-    "exportResource": "my-core-resource",
-    "exportFunction": "myCheckerFunction"
+    "enabled": true,
+    "exportResource": "qb-npwd",
+    "exportFunction": "HasPhone"
   },
   "twitter": {
     "showNotifications": true,
@@ -19,10 +19,10 @@
     "maxImages": 3
   },
   "general": {
-    "useResourceIntegration": false,
+    "useResourceIntegration": true,
     "toggleKey": "f1",
     "toggleCommand": "phone",
-    "defaultLanguage": "en"
+    "defaultLanguage": "fr"
   },
   "profanityFilter": {
     "enabled": false,
@@ -30,14 +30,14 @@
   },
   "database": {
     "useIdentifierPrefix": false,
-    "playerTable": "users",
-    "identifierColumn": "identifier",
+    "playerTable": "players",
+    "identifierColumn": "citizenid",
     "identifierType": "license",
     "profileQueries": true,
     "phoneNumberColumn": "phone_number"
   },
   "debug": {
-    "level": "silly",
+    "level": "error",
     "enabled": true,
     "sentryEnabled": true
   },
@@ -49,5 +49,15 @@
     "authorizationHeader": "PE-Secret",
     "url": "",
     "returnedDataIndexes": ["url"]
+  },
+  "images": {
+    "url": "https://api.imgur.com/3/image",
+    "type": "imgur",
+    "imageEncoding": "jpg",
+    "contentType": "multipart/form-data",
+    "useContentType": true,
+    "authorizationHeader": "Authorization",
+    "useAuthorization": true,
+    "returnedDataIndexes": ["data", "link"]
   }
 }
